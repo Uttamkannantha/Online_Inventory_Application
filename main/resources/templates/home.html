@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<br>
+<table align="center">
+    <tr>
+        <th>
+            <a th:href = "@{/addProducts}" class="btn btn-outline-primary">Add product</a>
+        </th>
+
+        <th>
+            <a th:href = "@{/delete}" class="btn btn-outline-primary">Delete Product</a>
+        </th>
+
+        <th>
+            <a th:href = "@{/update}" class="btn btn-outline-primary">Update Product</a>
+        </th>
+
+        <th>
+            <a th:href = "@{/CSV-export}" class="btn btn-outline-primary">Download CSV File</a>
+        </th>
+
+    </tr>
+
+</table>
+<br>
+
+
+
+<div align="center" class="container my-2">
+<h3>Inventory contents:</h3>
+
+<table class="table table-striped table-dark">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+    </tr>
+    </thead>
+    </tr>
+    <tr th:each = "product:${AllProducts}">
+        <td th:text = "${product.productId}"></td>
+        <td th:text = "${product.productName}"></td>
+        <td th:text = "${product.quantity}"></td>
+        <td th:text = "${product.price}"></td>
+
+    </tr>
+</table>
+</div>
+</body>
+</html>

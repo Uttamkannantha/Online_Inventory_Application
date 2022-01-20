@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+<form action= "#" th:action= "@{/deleteProduct}" th:object = "${DeleteProduct}" method="post">
+    <div class="form-group">
+        <label for="deleteProductID">Product Id</label>
+        <input type="text" class="form-control" id="deleteProductID"  th:field = "*{productId}" placeholder="Enter product Id to delete">
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<p>If you click the "Submit" button, the entered produce will be deleted".</p>
+</body>
+</html>
