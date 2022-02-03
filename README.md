@@ -20,8 +20,9 @@ Steps to run this project:
    4. Download the main package from this GitHub (Downloads as a zip file) and extract it.
    5. Copy the contents of the main folder(of downloaded Github project) into the main folder of the project in IntelliJ.
    6. Copy the content of pom.xml (Form GitHub) to pom.xml of your project(one in IntelliJ)
-   7. Build the project (maven build) to download all dependencies
-   8. Run the project (CrudApplication.java)
+   7. Add your aws scretkey and userId to application properties file
+   8. Build the project (maven build) to download all dependencies
+   9. Run the project (CrudApplication.java)
   
   Now open the Chrome browser and load http://localhost:8082/viewAll which is the home page of this application.
   Method to use the project is in the demo video
